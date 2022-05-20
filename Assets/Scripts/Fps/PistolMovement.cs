@@ -50,10 +50,13 @@ public class PistolMovement : MonoBehaviour
         }
 
         Vector2 mousePosition = inputPlayer.GetDeltaCordinates() * inputPlayer.GetMouseSensitivy();
-
+        //if(rotationX > -pistolL.GetMaxAngles().x && rotationX < pistolL.GetMaxAngles().x )
         rotationX += mousePosition.x;
+        //if(-rotationY > -pistolL.GetMaxAngles().y && rotationY < pistolL.GetMaxAngles().z)
         rotationY += mousePosition.y;
         transform.localEulerAngles = new Vector3(Mathf.Clamp(-rotationY, -pistolL.GetMaxAngles().y, pistolL.GetMaxAngles().z), Mathf.Clamp(rotationX, -pistolL.GetMaxAngles().x, pistolL.GetMaxAngles().x));
+        rotationX = Mathf.Clamp(rotationX, -pistolL.GetMaxAngles().x, pistolL.GetMaxAngles().x);
+        rotationY = Mathf.Clamp(rotationY, -pistolL.GetMaxAngles().z, pistolL.GetMaxAngles().y);
     }
 
 
