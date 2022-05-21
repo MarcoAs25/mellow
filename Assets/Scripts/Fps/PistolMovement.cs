@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class PistolMovement : MonoBehaviour
 {
     private InputManager inputPlayer;
-    private float rotationX = 0;
-    private float rotationY = 0;
+    [SerializeField] private float rotationX = 0;
+    [SerializeField] private float rotationY = 0;
     private PistolLockRotation pistolL;
 
     [SerializeField] private Rigidbody waterProjectile;

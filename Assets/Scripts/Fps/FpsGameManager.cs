@@ -5,12 +5,13 @@ using UnityEngine.UI;
 public class FpsGameManager : MonoBehaviour
 {
 
+    [SerializeField] GameObject floatingHitText;
     [SerializeField] GameObject gameOverUi;
     [SerializeField] Button btnexit;
     [SerializeField] Text Score;
     [SerializeField]  public GameBalancing FpsgambeBalancing;
     [SerializeField] private float courentTime;
-
+    [SerializeField] private int timemax3 = 60;
     [SerializeField] Slider slider;
     [SerializeField] GameObject mellow;
 
@@ -28,9 +29,17 @@ public class FpsGameManager : MonoBehaviour
     public static FpsGameManager Instance;
     public bool flag = false;
     public int scorei = 0;
+    public float timeToDestroyFloatingBtn = 0.3f;
     public void DecrementMellowsInScene()
     {
         mellowsInScene--;
+    }
+    public void SpawnText(Transform pos)
+    {
+        GameObject gm = Instantiate(floatingHitText, pos.position, Quaternion.identity) as GameObject;
+        gm.GetComponent<TextMesh>().text="+"+FpsgambeBalancing.incrementTimeValue.ToString();
+
+        Destroy(gm, timeToDestroyFloatingBtn);
     }
 
     public void Death()
@@ -93,8 +102,9 @@ public class FpsGameManager : MonoBehaviour
             }
         }
         timeIncrese += Time.deltaTime;
-        if (timeIncrese > 1f)
+        if (timeIncrese > 1f && timemax3 > 0)
         {
+            timemax3--;
             timeIncrese = 0f;
             velocityTarget += velocityIncreseVelocityPerSecond;
         }

@@ -25,6 +25,7 @@ public class ScriptDoProojetil : MonoBehaviour
             SoundManager.Instance.PlayBubble();
             //Destroy(other.gameObject);
 
+            FpsGameManager.Instance.SpawnText(transform);
             other.transform.SendMessage("ExplodirBolha", SendMessageOptions.DontRequireReceiver);
         }
     }
@@ -32,7 +33,7 @@ public class ScriptDoProojetil : MonoBehaviour
     {
         if (collision.gameObject.tag == "wall")
         {
-            Debug.Log("oi");
+
             Destroy(gameObject);
         }
     }

@@ -8,7 +8,7 @@ public class PipeBroken : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            FindObjectOfType<PuzzleUiManager>().RestartLevel();
+            FindObjectOfType<PuzzleUiManager>().RestartLevel(2);
         }
     }
 }

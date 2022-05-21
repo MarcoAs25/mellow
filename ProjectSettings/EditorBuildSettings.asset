@@ -15,24 +15,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Fps/FpsScene.unity
     guid: f47c7b46c451059449ed997a435ee97a
   - enabled: 1
-    path: Assets/Scenes/Puzzle/2.unity
-    guid: 666b2b72590fb3a4d887f42b0afe1935
+    path: Assets/Scenes/Puzzle/1.unity
+    guid: 16147781e68646b4d9578d32720241a8
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Puzzle/3.unity
+    path: Assets/Scenes/Puzzle/2.unity
     guid: e8c8c65f118e2b54ea63a79a4fead196
   - enabled: 1
-    path: Assets/Scenes/Puzzle/4.unity
+    path: Assets/Scenes/Puzzle/3.unity
     guid: 876d2fdc892d709449918e542b0a7009
   - enabled: 1
+    path: Assets/Scenes/Puzzle/4.unity
+    guid: 8a90c7923041d784db9d569b417ba508
+  - enabled: 1
     path: Assets/Scenes/Puzzle/5.unity
-    guid: afbfb4281093e634c980bae9b2f345a8
+    guid: c5c769bd7ac3f714e8852a86ff0aa88e
   - enabled: 1
     path: Assets/Scenes/Puzzle/6.unity
-    guid: a733c54410038e141a8a7fa5c4a18bab
+    guid: 39b132af40e5f6345b07ac1c8cb919e4
   - enabled: 1
     path: Assets/Scenes/Puzzle/7.unity
-    guid: 2fd3c94e2a999294bbdfaf7530b0f04a
+    guid: c7b26eafbe5e7434a80ea1ed7e35d55c
   - enabled: 1
     path: Assets/Scenes/Puzzle/8.unity
-    guid: fcfdbce19a7fdfe4ea34c2e3b53d7148
+    guid: 7b98e6282c8f6234eb29f3086ad8c44c
+  - enabled: 1
+    path: Assets/Scenes/Puzzle/9.unity
+    guid: 481211d22d0e26d4a8762dfc638d4578
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

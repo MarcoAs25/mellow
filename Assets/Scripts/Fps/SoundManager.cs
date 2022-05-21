@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioSource splash, water, bubble;
-    
+    [SerializeField] AudioClip[] clipSplash, clipwater,clipbubble;
     public static SoundManager Instance;
     public AudioSource sounDFunny;
     public AudioClip[] audios;
@@ -36,17 +36,26 @@ public class SoundManager : MonoBehaviour
 
     public void PlayShoot()
     {
-        if(Time.timeScale >0f)
+        if (Time.timeScale > 0f)
+        {
+            water.clip = clipwater[Random.Range(0, clipwater.Length)];
             water.Play();
+        }
     }
     public void PlaySplash()
     {
         if (Time.timeScale > 0f)
+        {
+            splash.clip = clipSplash[Random.Range(0, clipSplash.Length)];
             splash.Play();
+        }
     }
     public void PlayBubble()
     {
         if (Time.timeScale > 0f)
+        {
+            bubble.clip = clipbubble[Random.Range(0, clipbubble.Length)];
             bubble.Play();
+        }
     }
 }

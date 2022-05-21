@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FpsGameBalancing
   m_EditorClassIdentifier: 
   maxTime: 30
-  incrementTimeValue: 1
+  incrementTimeValue: 2
   decrementTimeValue: 3
   maxmellowsInScene: 10
   timeSpawn: 0.5
